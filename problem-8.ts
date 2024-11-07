@@ -6,9 +6,9 @@
     age: number;
     email: string;
   }
-  const person: Person = { name: "Alice", age: 0, email: "alice@example.com" };
+  const person: Person = { name: "Alice", age: 25, email: "alice@example.com" };
 
-  const validateKeys = <T >(
+  const validateKeys = <T extends object>(
     obj: T,
     keys: (keyof T)[]
   ): boolean => {

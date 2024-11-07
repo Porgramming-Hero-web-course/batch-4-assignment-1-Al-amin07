@@ -11,17 +11,14 @@
     age: 25,
     email: "alice@example.com",
   };
-  const updateProfile = (
-    myProfile: Profile,
-    obj: Partial<Profile>
-  ) => {
+  const updateProfile = <T>(myProfile: T, obj: Partial<T>) => {
     return {
       ...myProfile,
       ...obj,
     };
   };
-  const result = updateProfile(myProfile, { age: 30 });
-  console.log(result);
+
+  console.log(updateProfile(myProfile, { age: 26 }));
 
   //
 }
