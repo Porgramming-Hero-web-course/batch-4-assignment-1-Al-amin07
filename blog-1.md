@@ -5,6 +5,14 @@ Type guards are a powerfull feature in TypeScript that allows us to verify the t
 
 **Types of type Guard**
 1. typeof type guard
+
+const kgToGram = (value: string | number): string | number | undefined => {
+    if(typeof value === 'number'){
+        return value * 1000
+    }else if(typeof value === 'string'){
+        return parseFloat(value) * 1000
+    }
+}
 2. instanceof type guard
 3. in type guard
 
