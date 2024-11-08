@@ -15,4 +15,15 @@ const kgToGram = (value: string | number): string | number | undefined => {
 }
 2. instanceof type guard
 3. in type guard
+type User = {
+    name: string;
+    age: number
+}
+const user: User = {
+    name: 'Alamin',
+    age: 22
+}
+if('name' in user){
+    console.log(`Hello ${user.name}`)
+}
 
